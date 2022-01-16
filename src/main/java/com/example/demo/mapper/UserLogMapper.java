@@ -9,9 +9,9 @@ import java.util.List;
 @Mapper
 public interface UserLogMapper extends BaseMapper<UserLog> {
     /**
-     * 查询所有用户
+     * 查询所有用户日志
      *
-     * @return List<UserEntity>
+     * @return List<UserLog>
      */
     List<UserLog> queryAllUserLogs();
     
