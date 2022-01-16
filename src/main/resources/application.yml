@@ -1,0 +1,33 @@
+# 端口，项目上下文
+server:
+  port: 8080
+#  servlet:
+#    context-path: /kafka-demo
+
+# 配置MySQL数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+
+mybatis-plus:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath*:mybatis/mapper/**/*.xml
+
+
+# 日志输出配置
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: WARN
+        web: ERROR
+  file:
+    path: ./logs
+    name: './logs/kafka-demo.log'
+  pattern:
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:%L - %msg%n'
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:%L - %msg%n'
