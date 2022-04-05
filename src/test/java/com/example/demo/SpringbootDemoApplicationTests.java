@@ -29,5 +29,9 @@ class SpringbootDemoApplicationTests {
 		System.out.println(userLogs);
 		log.info("userLogs={}", JSON.toJSONString(userLogs,true));
 	}
+	@Test
+	public void test() {
+		System.out.println("hello,world");
+	}
 
 }
